@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result</title>
+</head>
+<body>
+
+<h1 id="msg">
+    Hello Students
+    <br>
+    Check your results
+</h1>
+
+<button onclick="ChangeGrade()">Grade</button>
+<button onclick="Enterresult()">Result</button>
+
+<script>
+
+let marks;   // Global variable
+
+function Enterresult()
+{
+    marks = parseFloat(prompt("Enter your marks:"));
+
+    let result;
+
+    if (marks >= 50)
+    {
+        result = "Pass";
+    }
+    else
+    {
+        result = "Fail";
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Marks: " + marks +
+        "<br>Result: " + result;
+}
+
+function ChangeGrade()
+{
+    let grade;
+
+    if (marks >= 90)
+    {
+        grade = "A+";
+    }
+    else if (marks >= 80)
+    {
+        grade = "A";
+    }
+    else if (marks >= 70)
+    {
+        grade = "B";
+    }
+    else if (marks >= 60)
+    {
+        grade = "C";
+    }
+    else if (marks >= 50)
+    {
+        grade = "D";
+    }
+    else
+    {
+        grade = "F";
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Marks: " + marks +
+        "<br>Grade: " + grade;
+}
+
+</script>
+
+</body>
+</html>
