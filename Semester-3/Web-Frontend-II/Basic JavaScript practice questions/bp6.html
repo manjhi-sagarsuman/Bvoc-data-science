@@ -1,2 +1,36 @@
-6. Use prompt() to take two numbers and display their addition.
+<!-- 6. Use prompt() to take two numbers and display their addition. -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+</head>
+<body>
+
+    <h1>Addition Program</h1>
+    <p>Refresh the page to run the program again.</p>
+
+    <!-- The result will be displayed inside this element -->
+    <h2 id="output"></h2>
+
+    <script>
+        // 1. Take two numbers from the user using prompt()
+        let input1 = prompt("Enter the first number:");
+        let input2 = prompt("Enter the second number:");
+
+        // 2. Convert the string inputs into floating-point numbers
+        let num1 = parseFloat(input1);
+        let num2 = parseFloat(input2);
+
+            // 4. Calculate the sum
+            let sum = num1 + num2;
+
+            // 5. Display the result on the webpage
+            document.getElementById("output").innerText = "The sum of " + num1 + " and " + num2 + " is: " + sum;
+        
+    </script>
+
+</body>
+</html>
