@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Enter Number:
+<input type="number" id="num">
+
+<button onclick="table()">Print Table</button>
+
+<script>
+function table() {
+  let n = document.getElementById("num").value;
+
+  for (let i = 1; i <= 10; i++) {
+    alert(n + " x " + i + " = " + (n * i));
+  }
+}
+</script>
+
+</body>
+</html>
