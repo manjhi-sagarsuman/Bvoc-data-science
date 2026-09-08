@@ -8,18 +8,27 @@
  </head>
  <body>
     <script>
-        function Calculate(a, b, callback)
-        {
-            let sum = a + b;
-            callback(sum);
+        // function Calculate(a, b, callback)
+        // {
+        //     let sum = a + b;
+        //     callback(sum);
+        // }
+
+        // function Result(sum)
+        // {
+        //     console.log("The total is: " + sum);
+        // }
+
+        // Calculate(5, 10, Result);
+        function add(a,b){
+            return a + b;
         }
 
-        function Result(sum)
-        {
-            console.log("The total is: " + sum);
+        function calculate(func,x,y){
+            console.log(func(x,y));
         }
 
-        Calculate(5, 10, Result);
+        calculate(add, 5, 10);
     </script>
  </body>
  </html>
