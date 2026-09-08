@@ -1,0 +1,25 @@
+<!-- Create a function "Calculate" that accepts anotther function and two numbers. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        function Calculate(a, b, callback)
+        {
+            let sum = a + b;
+            callback(sum);
+        }
+
+        function Result(sum)
+        {
+            console.log("The total is: " + sum);
+        }
+
+        Calculate(5, 10, Result);
+    </script>
+ </body>
+ </html>
