@@ -1,0 +1,22 @@
+<!-- addition Using Callback Function -->
+ <!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function Result(sum) {
+    console.log("The total is: " + sum);
+}
+
+
+function add(num1, num2, callback) {
+    let sum = num1 + num2;
+    callback(sum); 
+}
+
+add(5, 10, Result);
+
+</script>
+
+</body>
+</html>
