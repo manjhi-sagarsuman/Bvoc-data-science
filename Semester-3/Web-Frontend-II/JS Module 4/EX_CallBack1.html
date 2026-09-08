@@ -1,0 +1,26 @@
+<!-- Display a "Welcome" messsage using a Higher Order Function in JavaScript. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        function welcome()
+        {
+            console.log("Welcome to Higher Order Function");
+        }
+
+        function message(hello)
+        {
+            hello();
+        }
+
+        let show = welcome();
+        message(show);
+    </script>
+    
+ </body>
+ </html>
