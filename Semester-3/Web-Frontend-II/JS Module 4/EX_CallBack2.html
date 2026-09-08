@@ -1,0 +1,22 @@
+<!-- Create a Higher Order Function that displays "JavaScript is Easy to Learn" using a callback function. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        function Message(){
+            console.log("JavaScript is Easy to Learn");
+        }
+
+        function excute(callback){
+            callback();
+        }
+
+        excute(Message);
+    </script>
+ </body>
+ </html>
