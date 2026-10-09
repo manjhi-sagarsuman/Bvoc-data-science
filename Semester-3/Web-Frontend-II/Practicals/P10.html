@@ -1,0 +1,55 @@
+<!-- 10 Student Information System Using JavaScript -->
+<html>
+<body>
+    <h2>Student Information System</h2>
+    <p><b>Name:</b> Sagarsuman Manjhi</p>
+
+    <input id="name" placeholder="Student Name">
+    <input id="roll" placeholder="Roll Number">
+    <input id="marks" type="number" placeholder="Marks">
+    <button onclick="addStudent()">Add Student</button>
+
+    <h3>Student Records</h3>
+    <p id="output"></p>
+
+    <script>
+        let students = [];
+
+        function addStudent() {
+            let name = document.getElementById("name").value;
+            let roll = document.getElementById("roll").value;
+            let marks = Number(document.getElementById("marks").value);
+
+            if (name === "" || roll === "" ||
+                document.getElementById("marks").value === "" ||
+                marks < 0 || marks > 100) {
+                alert("Enter valid student details!");
+                return;
+            }
+
+            let student = {
+                name: name,
+                roll: roll,
+                marks: marks,
+                result: marks > 75 ? "Pass" : "Fail"
+            };
+
+            students.push(student);
+            displayStudents();
+        }
+
+        function displayStudents() {
+            let result = "";
+
+            students.forEach(function(s) {
+                result += "Name: " + s.name +
+                    ", Roll: " + s.roll +
+                    ", Marks: " + s.marks +
+                    ", Result: " + s.result + "<br>";
+            });
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
