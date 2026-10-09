@@ -1,0 +1,19 @@
+<html>
+<body>
+<script>
+let num = Number(prompt("Enter a number:"));
+let fact = 1;
+let i = 1;
+
+if (Number.isInteger(num) && num >= 0) {
+    while (i <= num) {
+        fact = fact * i;
+        i++;
+    }
+    console.log("Factorial of " + num + " = " + fact);
+} else {
+    console.log("Please enter a non-negative integer.");
+}
+</script>
+</body>
+</html>
