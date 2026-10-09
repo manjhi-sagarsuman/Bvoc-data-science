@@ -1,0 +1,28 @@
+<!-- DOM Manipulation in JavaScript -->
+ <html>
+<body>
+<h2 id="title">Hello World</h2>
+
+<input id="name" placeholder="Enter your name">
+<button onclick="changeText()">Submit</button>
+<button onclick="changeStyle()">Change Style</button>
+<button onclick="removeText()">Remove</button>
+
+<p id="output"></p>
+
+<script>
+function changeText() {
+    let name = document.getElementById("name").value;
+    document.getElementById("output").innerHTML = "Hello " + name;
+}
+
+function changeStyle() {
+    document.getElementById("title").style.color = "red";
+}
+
+function removeText() {
+    document.getElementById("output").remove();
+}
+</script>
+</body>
+</html>
