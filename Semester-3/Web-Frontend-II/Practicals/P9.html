@@ -1,0 +1,38 @@
+<!-- 9. Event Handling and Form Validation — Student Registration Form -->
+<html>
+<body>
+<h2>Student Registration</h2>
+
+<form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    Age: <input type="number" id="age"><br><br>
+    <button type="submit">Register</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let age = document.getElementById("age").value;
+
+    if (name == "" || email == "" || age == "") {
+        document.getElementById("msg").innerHTML = "Fill all fields!";
+        return false;
+    }
+
+    if (!email.includes("@") || age < 18) {
+        document.getElementById("msg").innerHTML =
+            "Enter valid email and age (18+).";
+        return false;
+    }
+
+    document.getElementById("msg").innerHTML =
+        "Registration Successful!";
+    return false;
+}
+</script>
+</body>
+</html>
