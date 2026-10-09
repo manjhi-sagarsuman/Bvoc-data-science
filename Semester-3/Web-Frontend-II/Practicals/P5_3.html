@@ -1,0 +1,16 @@
+<!-- 4. Callback Function -->
+<html>
+<body>
+<script>
+function calculate(a, b, callback) {
+    console.log("Result:", callback(a, b));
+}
+
+function subtract(x, y) {
+    return x - y;
+}
+
+calculate(10, 4, subtract);
+</script>
+</body>
+</html>
