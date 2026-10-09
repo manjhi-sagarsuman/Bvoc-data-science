@@ -1,0 +1,28 @@
+<!-- 5. super Keyword (Inheritance) -->
+ <html>
+<body>
+<script>
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+    display() {
+        console.log("Name:", this.name);
+    }
+}
+
+class Student extends Person {
+    constructor(name, course) {
+        super(name);
+        this.course = course;
+    }
+    show() {
+        super.display();
+        console.log("Course:", this.course);
+    }
+}
+
+new Student("Sagar", "Data Science").show();
+</script>
+</body>
+</html>
