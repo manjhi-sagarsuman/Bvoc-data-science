@@ -3,18 +3,15 @@
 <body>
     <h2>Student Information System</h2>
     <p><b>Name:</b> Sagarsuman Manjhi</p>
-
     <input id="name" placeholder="Student Name">
     <input id="roll" placeholder="Roll Number">
     <input id="marks" type="number" placeholder="Marks">
     <button onclick="addStudent()">Add Student</button>
-
     <h3>Student Records</h3>
     <p id="output"></p>
 
     <script>
         let students = [];
-
         function addStudent() {
             let name = document.getElementById("name").value;
             let roll = document.getElementById("roll").value;
@@ -26,7 +23,6 @@
                 alert("Enter valid student details!");
                 return;
             }
-
             let student = {
                 name: name,
                 roll: roll,
@@ -37,10 +33,8 @@
             students.push(student);
             displayStudents();
         }
-
         function displayStudents() {
             let result = "";
-
             students.forEach(function(s) {
                 result += "Name: " + s.name +
                     ", Roll: " + s.roll +
